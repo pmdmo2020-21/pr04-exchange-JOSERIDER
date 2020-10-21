@@ -3,6 +3,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/main_margin">
 
+    <TextView
+        android:id="@+id/main_lbl_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_lbl_amount"
+        tools:textColor="@color/pink_200" />
+
+    <EditText
+        android:id="@+id/main_edtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        tools:ignore="Autofill"
+        tools:text="3.63">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/main_lbl_fromCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_inner_margin_x2"
+        android:text="@string/main_lbl_currency" />
+
+    <!-- From Currency -->
+    <LinearLayout
+        android:id="@+id/ll_fromCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/main_rdg_fromCurrency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_rdb_fromCurrency_dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_dollar"
+                tools:checked="true" />
+
+            <RadioButton
+                android:id="@+id/main_rdb_fromCurrency_euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_euro"
+                tools:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/main_rdb_fromCurrency_pound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_pound" />
+
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img_fromCurrency"
+            style="@style/Theme.PR04Exchange"
+            android:layout_width="@dimen/main_img_currency_width"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/img_currency_description"
+            tools:src="@drawable/ic_dollar" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/main_lbl_toCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_inner_margin_x2"
+        android:text="@string/main_lbl_toCurrency" />
+    <!-- To currency -->
+    <LinearLayout
+        android:id="@+id/ll_toCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/main_rdg_toCurrency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_rdb_toCurrency_dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_dollar"
+                tools:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/main_rdb_toCurrency_euro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_euro"
+                tools:checked="true" />
+
+            <RadioButton
+                android:id="@+id/main_rdb_toCurrency_pound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_inner_margin"
+                android:text="@string/main_rdb_pound" />
+
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img_toCurrency"
+            android:layout_width="@dimen/main_img_currency_width"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/img_currency_description"
+            tools:src="@drawable/ic_euro" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_inner_margin_x3"
+        android:text="@string/btn_exchange" />
 </LinearLayout>
