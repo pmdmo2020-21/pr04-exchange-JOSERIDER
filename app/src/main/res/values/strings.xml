@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Exchange</string>
+    <string name="main_lbl_amount">Amount</string>
+    <string name="main_lbl_currency">From currency</string>
+    <string name="main_rdb_dollar">Dollar</string>
+    <string name="main_rdb_euro">Euro</string>
+    <string name="main_rdb_pound">Pound</string>
+    <string name="img_currency_description">Icon for currency</string>
+    <string name="main_lbl_toCurrency">To currency</string>
+    <string name="btn_exchange">Exchange</string>
+    <string name="exchange_result">%s %s = %s %s</string>
 </resources>
